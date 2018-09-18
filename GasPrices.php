@@ -5,9 +5,9 @@
         Exercise 02_01_01
 
         Author: Eli Boblett
-        Date: 9.14.18 
+        Date: 9.18.18 
 
-        OddNumbers.php
+        GasPrices.php
      -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

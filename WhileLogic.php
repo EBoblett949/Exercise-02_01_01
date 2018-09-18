@@ -7,7 +7,7 @@
         Author: Eli Boblett
         Date: 9.14.18 
 
-        OddNumbers.php
+        WhileLogic.php
      -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
