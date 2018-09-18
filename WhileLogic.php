@@ -18,6 +18,7 @@
 <h2>While Logic</h2>
     <?php
         $counter = 0;
+        // this while loops through 100 and adds it to an array
         while ($counter <= 100) {
             $numbers[] = $counter;
             ++$counter;
