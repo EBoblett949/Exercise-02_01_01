@@ -5,9 +5,9 @@
         Exercise 02_01_01
 
         Author: Eli Boblett
-        Date: 9.13.18 
+        Date: 9.14.18 
 
-        DiceRoll.php
+        DiceRoll2.php
      -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,10 +15,14 @@
     <script src="modernizr.custom.65897.js"></script>
 </head>
 <body>
-<h2>Dice Roll</h2>
+<h2>Dice Roll 2</h2>
     <?php
+    // global variables
         $faceNameSingular = array("one", "two", "three", "four", "five", "six");
         $faceNamePlural = array("ones", "twos", "threes", "fours", "fives", "sixes");
+        $doublesCount = 0;
+        $rollNumber = 1;
+        define("NBR_ROLLS", 5);
 
         function checkForDoubles($die1, $die2) {
             global $faceNameSingular;
@@ -74,14 +78,21 @@
         }
 
         $dice = array();
-        $dice[0] = rand(1, 6); 
-        $dice[1] = rand(1, 6); 
-        echo "<p>";
-        $score = $dice[0] + $dice[1];
-        echo "The total score for the roll was $score.<br>";
-        $doubles = checkForDoubles($dice[0], $dice[1]);
-        displayScoreText($score, $doubles);
-        echo "</p>";
+        while ($rollNumber <= NBR_ROLLS) {
+            $dice[0] = rand(1, 6); 
+            $dice[1] = rand(1, 6); 
+            echo "<p>";
+            $score = $dice[0] + $dice[1];
+            echo "The total score for the roll was $score.<br>";
+            $doubles = checkForDoubles($dice[0], $dice[1]);
+            displayScoreText($score, $doubles);
+            echo "</p>";
+            if ($doubles) {
+                ++$doublesCount;
+            }
+            ++$rollNumber;
+        }
+        echo "<p>Doubles occurred on $doublesCount of the " . NBR_ROLLS . " rolls.</p>"
     ?>
 </body>
 </html>
