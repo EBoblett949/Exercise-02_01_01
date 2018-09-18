@@ -18,9 +18,11 @@
 <h2>Odd Numbers</h2>
     <?php
         $number = 1;
-        while ($number < 5) {
-            ($number % 2 == 0) ? "<p>$number is odd</p><br>" : "<p>$number is not odd</p><br>";
+        $result = "";
+        while ($number < 101) {
+            ($number % 2 == 1) ? $result = "<p>$number is odd</p><br>" : $result = "<p>$number is not odd</p><br>";
             $number++; 
+            echo "$result";
         }
     ?>
 </body>
