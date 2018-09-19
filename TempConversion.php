@@ -18,14 +18,14 @@
 <h2>Temp Conversion</h2>
     <?php
     // these are the variables for fahrenheit and celsius
-        $temp = 1;
-        $celc = 1;
+        $temp = 0;
+        $celc = 0;
 
         // This loops through 100 times and it calculates the temperature in celsius and then prints both fahrenheit and celsius
         while ($temp <= 100) {
             $celc = (($temp - 32) * (5/9));
-            echo "Fahrenheit is: $temp<br>";
-            echo " Celsius is: $celc<br><br>";
+            echo "<font color=\"red\">Fahrenheit is: $temp</font><br>";
+            echo "<font color=\"blue\"> Celsius is: " . number_format($celc, 2) . "</font><br><br>";
             $temp++;
         }
     ?>
